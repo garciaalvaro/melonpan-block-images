@@ -1,0 +1,20 @@
+/*
+ * Fixes
+ */
+
+// Internet explorer 11 doesn't support object-fit property.
+// We assigned a div with background-image property as a fallback for it,
+// so we need to hide the image which has the object-fit applied.
+/* https://stackoverflow.com/a/20541859 | CC BY-SA 3.0 */
+_:-ms-fullscreen, :root .mbi-cover .mbi-image
+	display none
+_:-ms-fullscreen, :root .mbi-cover .mbi-image-bg_image
+	display block
+
+// IE11 flexbox issues.
+_:-ms-fullscreen, :root .mbi-layout-slider.mbi-fixed_dimension-height .mbi-image
+	left 50%
+	transform translateX(-50%)
+_:-ms-fullscreen, :root .mbi-layout-slider.mbi-fixed_dimension-width .mbi-image
+	top 50%
+	transform translateY(-50%)

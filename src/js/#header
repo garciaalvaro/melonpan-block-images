@@ -1,0 +1,2 @@
+/*! <%= pkg.name_title %> - <%= pkg.version %> | <%= pkg.homepage %> */
+/*! TinyColor | https://github.com/bgrins/TinyColor | 2016-07-07, Brian Grinstead | MIT License */

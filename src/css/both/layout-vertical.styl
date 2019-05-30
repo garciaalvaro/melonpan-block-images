@@ -1,0 +1,21 @@
+/*
+ * Layout - Vertical
+ */
+
++prefix-classes('mbi-')
+	.layout-vertical
+		flex-direction column
+
+		.figure
+			border-top-style solid
+			border-bottom-style solid
+			border-left none
+			border-right none
+
+			&:first-child
+				border-top-style none
+			&:last-child
+				border-bottom-style none
+
+		.image
+			width 100%

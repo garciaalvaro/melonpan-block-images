@@ -1,0 +1,26 @@
+/*
+ * Layout - Horizontal
+ */
+
++prefix-classes('mbi-')
+	.layout-horizontal
+
+		&.fixed_dimension-height
+			.figure
+				flex 1
+		&.fixed_dimension-width
+		&.fixed_dimension-height.cover
+			.figure
+				flex 1 1
+
+		.figure
+			flex-basis 0 // Needed for IE11
+			border-left-style solid
+			border-right-style solid
+			border-top none
+			border-bottom none
+
+			&:first-child
+				border-left none
+			&:last-child
+				border-right none
