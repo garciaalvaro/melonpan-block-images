@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Melonpan Block - Images
- * Plugin URI: #
- * Description: Add a gallery of images in a simple but clean layout.
- * Author: melonpan
- * Version: 1.0.0
+ * Plugin Name: _PLUGIN_NAME_
+ * Plugin URI: _PLUGIN_URI_
+ * Description: _PLUGIN_DESCRIPTION_
+ * Author: _PLUGIN_AUTHOR_
+ * Version: _PLUGIN_VERSION_
  * License: GPL3+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  */
@@ -15,7 +15,7 @@ namespace MELONPANBLOCKIMAGES;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 if ( ! defined( __NAMESPACE__ . '\PLUGIN_VERSION' ) ) {
-	define( __NAMESPACE__ . '\PLUGIN_VERSION', '1.0.0' );
+	define( __NAMESPACE__ . '\PLUGIN_VERSION', '_PLUGIN_VERSION_' );
 }
 if ( ! defined( __NAMESPACE__ . '\PLUGIN_NAME' ) ) {
 	define( __NAMESPACE__ . '\PLUGIN_NAME', 'melonpan-block-images' );
