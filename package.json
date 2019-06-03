@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"dev": "webpack --mode development --watch --config ./.webpack/src.config.babel.js",
-		"prod": "webpack --mode production --config ./.webpack/src.config.js",
+		"prod": "webpack --mode production --config ./.webpack/src.config.babel.js",
 		"copy": "webpack --config ./.webpack/release-copy.config.js",
 		"replace": "webpack --config ./.webpack/release-replace.config.js",
 		"remove": "rm _extras/release/_replace.js _extras/release/_copy.js _extras/release/build/melonpan-block-images-front.js",

@@ -8,7 +8,7 @@ const getReplace = (search, replace) => ({
 	options: {
 		search: search,
 		replace: replace,
-		flags: "g"
+		flags: "gm"
 	}
 });
 
@@ -30,7 +30,7 @@ module.exports = [
 								name: "[name].[ext]"
 							}
 						},
-						getReplace(/^( \* Version: )\d+\.\d+\.\d+/, "$1" + version)
+						getReplace(/^( \* Version: )\d+\.\d+\.\d+/.source, "$1" + version)
 					]
 				},
 				{
@@ -42,7 +42,7 @@ module.exports = [
 								name: "[name].[ext]"
 							}
 						},
-						getReplace(/^(Stable tag: )\d+\.\d+\.\d+/, "$1" + version)
+						getReplace(/^(Stable tag: )\d+\.\d+\.\d+/.source, "$1" + version)
 					]
 				}
 			]
