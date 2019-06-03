@@ -6,7 +6,7 @@ module.exports = [
 	{
 		entry: _rootdir + `/.webpack/copy.index.js`,
 		output: {
-			path: _rootdir + "/_extras/releases/latest",
+			path: _rootdir + "/_extras/release",
 			filename: `_copy.js`
 		},
 		plugins: [

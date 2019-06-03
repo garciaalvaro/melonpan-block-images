@@ -26,7 +26,7 @@ module.exports = [
 	{
 		entry: _rootdir + `/.webpack/replace.index.js`,
 		output: {
-			path: `${_rootdir}/_extras/releases/latest`,
+			path: `${_rootdir}/_extras/release`,
 			filename: `_replace.js`
 		},
 		module: {

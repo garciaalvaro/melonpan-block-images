@@ -6,7 +6,7 @@
 		"prod": "webpack --mode production --config ./.webpack/editor.config.js & webpack --mode production --config ./.webpack/front.config.js",
 		"copy": "webpack --config ./.webpack/copy.config.js",
 		"replace": "webpack --config ./.webpack/replace.config.js",
-		"remove": "rm _extras/releases/latest/_replace.js _extras/releases/latest/_copy.js _extras/releases/latest/build/melonpan-block-images-front.js",
+		"remove": "rm _extras/release/_replace.js _extras/release/_copy.js _extras/release/build/melonpan-block-images-front.js",
 		"release": "npm run prod && npm run copy && npm run replace && npm run remove",
 		"type": "tsc"
 	},

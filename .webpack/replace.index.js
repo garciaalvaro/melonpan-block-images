@@ -1,2 +1,2 @@
-import "../_extras/releases/latest/melonpan-block-images.php";
-import "../_extras/releases/latest/README.txt";
+import "../_extras/release/melonpan-block-images.php";
+import "../_extras/release/README.txt";
