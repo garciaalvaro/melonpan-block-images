@@ -1,17 +1,16 @@
-import l, { Div, Figure, Figcaption, Img } from "utils";
+import { Div, Figure, Figcaption, Img } from "utils/components";
 
-interface Props {
+interface Props
+	extends Pick<
+		Attributes,
+		"layout" | "fixed_dimension" | "cover" | "cover_ratio" | "separation"
+	> {
 	image: Image;
-	layout: Attributes["layout"];
-	fixed_dimension: Attributes["fixed_dimension"];
-	cover: Attributes["cover"];
-	cover_ratio: Attributes["cover_ratio"];
-	separation: Attributes["separation"];
 	images_length?: number;
 	container_ratio?: number;
 }
 
-const Image: React.ComponentType<Props> = props => {
+export const Image: React.ComponentType<Props> = props => {
 	const {
 		layout,
 		fixed_dimension,
@@ -73,5 +72,3 @@ const Image: React.ComponentType<Props> = props => {
 		</Figure>
 	);
 };
-
-export default Image;

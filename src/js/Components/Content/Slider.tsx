@@ -1,23 +1,23 @@
+import { Div, InputRadio, Label } from "utils/components";
+import { addPrefix } from "utils/tools/addPrefix";
+import { Image } from "./Image";
 import uuid from "uuid/v4";
-import l, { Div, InputRadio, Label, addPrefix } from "utils";
-import Image from "./Image";
 
 const { noop } = lodash;
 const { Component, Fragment } = wp.element;
 
-class Slider extends Component<Edit | Save> {
+export class Slider extends Component<BlockProps> {
 	componentDidMount() {
 		const { attributes, setAttributes } = this.props;
 		const { id } = attributes;
 
-		if (id) {
-			return;
+		if (!id) {
+			setAttributes({ id: uuid() });
 		}
-
-		setAttributes({ id: uuid() });
 	}
 
 	render() {
+		const { attributes } = this.props;
 		const {
 			layout,
 			fixed_dimension,
@@ -27,12 +27,15 @@ class Slider extends Component<Edit | Save> {
 			images,
 			id,
 			slider_dot_color
-		} = this.props.attributes;
-		let container_ratio = 0;
+		} = attributes;
 
 		if (!id || !images) {
 			return null;
 		}
+
+		// TODO: This should be moved out of render function.
+		// A block deprecation might be necessary.
+		let container_ratio = 0;
 
 		if (images && !cover) {
 			images.forEach(image => {
@@ -46,9 +49,9 @@ class Slider extends Component<Edit | Save> {
 					container_ratio = Math.min(image_ratio, container_ratio);
 				}
 			});
-		}
 
-		container_ratio = Math.max(container_ratio * 1000) / 1000;
+			container_ratio = Math.max(container_ratio * 1000) / 1000;
+		}
 
 		return (
 			<Fragment>
@@ -58,7 +61,7 @@ class Slider extends Component<Edit | Save> {
 							key={index}
 							name={id}
 							classes={"slider-input"}
-							id={`#${id}-${index.toString()}`}
+							id={`!${id}-${index.toString()}`}
 							value={addPrefix(index.toString())}
 							checked={index === 0}
 							onChange={noop}
@@ -95,5 +98,3 @@ class Slider extends Component<Edit | Save> {
 		);
 	}
 }
-
-export default Slider;

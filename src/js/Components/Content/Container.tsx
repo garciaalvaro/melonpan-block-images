@@ -1,10 +1,11 @@
-import l, { Div } from "utils";
-import Image from "./Image";
-import Slider from "./Slider";
+import { Div } from "utils/components";
+import { Image } from "./Image";
+import { Slider } from "./Slider";
 
 const { isUndefined } = lodash;
 
-const Container: React.ComponentType<Edit | Save> = props => {
+export const Container: React.ComponentType<BlockProps> = props => {
+	const { attributes } = props;
 	const {
 		layout,
 		fixed_dimension,
@@ -13,7 +14,7 @@ const Container: React.ComponentType<Edit | Save> = props => {
 		separation,
 		images,
 		responsive
-	} = props.attributes;
+	} = attributes;
 
 	return (
 		<Div
@@ -46,5 +47,3 @@ const Container: React.ComponentType<Edit | Save> = props => {
 		</Div>
 	);
 };
-
-export default Container;

@@ -45,7 +45,7 @@ function enqueue_front() {
  *
  * @since 1.0.0
  */
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor', 900 );
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor' );
 function enqueue_editor() {
 
 	wp_enqueue_style(
@@ -60,11 +60,13 @@ function enqueue_editor() {
 		BUILD_DIR . PLUGIN_NAME . '-editor.js',
 		array(
 			'lodash',
-			'wp-i18n',
-			'wp-element',
+			'wp-block-editor',
+			'wp-blocks',
 			'wp-components',
-			'wp-editor',
+			'wp-data',
+			'wp-element',
 			'wp-hooks',
+			'wp-i18n',
 		),
 		PLUGIN_VERSION,
 		true // Enqueue in the footer.
