@@ -1,14 +1,14 @@
-=== _PLUGIN_NAME_ ===
-Contributors: _PLUGIN_AUTHOR_
-Tags: _PLUGIN_TAGS_
-Requires at least: _PLUGIN_REQUIRES_AT_LEAST_
-Tested up to: _PLUGIN_TESTED_UP_TO_
-Stable tag: _PLUGIN_VERSION_
-Requires PHP: _PLUGIN_PHP_VERSION_
+=== Melonpan Block - Images ===
+Contributors: melonpan
+Tags: gutenberg, blocks, editor, images, slider, carousel
+Requires at least: 5.2
+Tested up to: 5.2
+Stable tag: 1.0.0
+Requires PHP: 5.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-_PLUGIN_DESCRIPTION_
+Add a gallery of images in a simple but clean layout.
 
 == Description ==
 

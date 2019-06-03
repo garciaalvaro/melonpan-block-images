@@ -1,17 +1,19 @@
 {
 	"name": "melonpan-block-images",
+	"plugin_name": "Melonpan Block - Images",
+	"plugin_uri": "https://wordpress.org/plugins/melonpan-block-images/",
 	"version": "1.0.0",
+	"alias": {
+		"utils": "./src/js/utils"
+	},
 	"scripts": {
-		"dev": "webpack --mode development --watch --config ./.webpack/editor.config.js && webpack --mode development --watch --config ./.webpack/front.config.js",
-		"prod": "webpack --mode production --config ./.webpack/editor.config.js & webpack --mode production --config ./.webpack/front.config.js",
-		"copy": "webpack --config ./.webpack/copy.config.js",
-		"replace": "webpack --config ./.webpack/replace.config.js",
+		"dev": "webpack --mode development --watch --config ./.webpack/src.config.babel.js",
+		"prod": "webpack --mode production --config ./.webpack/src.config.js",
+		"copy": "webpack --config ./.webpack/release-copy.config.js",
+		"replace": "webpack --config ./.webpack/release-replace.config.js",
 		"remove": "rm _extras/release/_replace.js _extras/release/_copy.js _extras/release/build/melonpan-block-images-front.js",
 		"release": "npm run prod && npm run copy && npm run replace && npm run remove",
 		"type": "tsc"
-	},
-	"alias": {
-		"utils": "./src/js/utils"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.5",
@@ -37,12 +39,9 @@
 		"css-loader": "^2.1.1",
 		"file-loader": "^3.0.1",
 		"lodash": "^4.17.11",
-		"merge2": "^1.2.3",
 		"mini-css-extract-plugin": "^0.7.0",
 		"nib": "^1.1.2",
 		"optimize-css-assets-webpack-plugin": "^5.0.1",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6",
 		"string-replace-loader": "^2.1.1",
 		"style-loader": "^0.23.1",
 		"stylus": "^0.54.5",
@@ -53,16 +52,5 @@
 	},
 	"dependencies": {
 		"tinycolor2": "^1.4.1"
-	},
-	"wp": {
-		"plugin_name": "Melonpan Block - Images",
-		"plugin_uri": "https://wordpress.org/plugins/melonpan-block-images/",
-		"plugin_description": "Add a gallery of images in a simple but clean layout.",
-		"plugin_author": "melonpan",
-		"plugin_version": "1.0.0",
-		"plugin_tested_up_to": "5.2",
-		"plugin_requires_at_least": "5.2",
-		"plugin_php_version": "5.6",
-		"plugin_tags": "gutenberg, blocks, editor, images, slider, carousel"
 	}
 }

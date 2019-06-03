@@ -1,4 +1,4 @@
-const package = require("../package.json");
+const pkg = require("../package.json");
 const TerserJSPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const BannerPlugin = require("webpack").BannerPlugin;
@@ -6,18 +6,7 @@ const nib = require("nib");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const _rootdir = __dirname + "/..";
-const { wp, name } = package;
-const {
-	plugin_name,
-	plugin_uri,
-	plugin_description,
-	plugin_author,
-	plugin_version,
-	plugin_tested_up_to,
-	plugin_requires_at_least,
-	plugin_php_version,
-	plugin_tags
-} = wp;
+const { name, version, plugin_name, plugin_uri } = pkg;
 
 module.exports = [
 	{
@@ -69,7 +58,7 @@ module.exports = [
 			new BannerPlugin({
 				banner: () => {
 					const banner = [
-						`/*! ${plugin_name} | ${plugin_version} | ${plugin_uri} */`,
+						`/*! ${plugin_name} | ${version} | ${plugin_uri} */`,
 						`/*! TinyColor | https://github.com/bgrins/TinyColor | 2016-07-07, Brian Grinstead | MIT License */`
 					];
 					return banner.join("");
@@ -78,7 +67,7 @@ module.exports = [
 				include: new RegExp(/.*?\.js/)
 			}),
 			new BannerPlugin({
-				banner: `${plugin_name} | ${plugin_version} | ${plugin_uri}`,
+				banner: `${plugin_name} | ${version} | ${plugin_uri}`,
 				include: new RegExp(/.*?\.css/)
 			})
 		],

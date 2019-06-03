@@ -4,7 +4,7 @@ const _rootdir = __dirname + "/..";
 
 module.exports = [
 	{
-		entry: _rootdir + `/.webpack/copy.index.js`,
+		entry: _rootdir + `/.webpack/release-copy.index.js`,
 		output: {
 			path: _rootdir + "/_extras/release",
 			filename: `_copy.js`
