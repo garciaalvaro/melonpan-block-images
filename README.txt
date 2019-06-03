@@ -50,3 +50,7 @@ Installation from the WordPress admin.
 == Credits ==
 
 Screenshot images belong to [Charles Postiaux](https://unsplash.com/@charlpost).
+
+== Screenshots ==
+
+1. Block edit panel.
