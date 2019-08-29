@@ -17,10 +17,10 @@
 		"jsx": "react",
 		"baseUrl": ".",
 		"paths": {
-			"utils/*": ["src/js/utils/*"],
-			"Components/*": ["src/js/Components/*"]
+			"Components/*": ["src/Components/*"],
+			"utils/*": ["src/utils/*"]
 		},
-		// https://stackoverflo,w.com/a/52404148
+		// https://stackoverflow.com/a/52404148
 		"skipLibCheck": true
 	},
 	"include": ["src", "types.d.ts"],

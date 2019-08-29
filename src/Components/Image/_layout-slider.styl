@@ -1,0 +1,94 @@
+/**
+ * Image - Layout - Slider
+ */
+
++prefix-classes('mbi-')
+
+	.layout-slider
+		position relative
+		width 100%
+		display flex
+		flex-direction column
+
+		&.fixed_dimension-height
+
+			.image-container
+				display flex
+				justify-content center
+
+			.image
+				width auto
+
+		&.fixed_dimension-width
+
+			.image
+				height auto
+				top 50%
+				transform translateY(-50%)
+
+		&.cover
+			.image
+				width 100%
+				height 100%
+
+		.figure
+			width 100%
+			display none
+
+			&:first-child:last-child
+				display block
+
+		.image-container
+			width 100%
+			height 0
+
+		.image
+			position absolute
+			object-fit contain
+			height 100%
+			width 100%
+
+		for i in (1..30)
+
+			.slider-input:nth-child({i}):checked
+
+				~ .slider-images .figure:nth-child({i})
+					display block
+
+				~ .slider-navigation .slider-dot:nth-child({i})
+					opacity 1
+
+	.slider-images
+		width 100%
+
+	.slider-navigation
+		display flex
+		flex-direction row
+		flex-flow row wrap
+		justify-content center
+
+	.slider-input
+		display none
+
+	.figcaption
+		margin-bottom -.5em
+
+	.slider-dot
+		opacity .3
+		width 34px
+		height 50px
+		display flex
+		justify-content center
+		align-items center
+		cursor pointer
+		transition opacity .1s $e_deceleration
+
+		&:hover
+			opacity .6
+
+		&:before
+			content ""
+			width 8px
+			height 8px
+			border-radius 50%
+			background-color currentColor

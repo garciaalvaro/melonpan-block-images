@@ -19,12 +19,10 @@ interface Object {
 	[key: string]: any;
 }
 
-interface BlockProps extends Object {
-	attributes: Attributes;
-}
-
-interface BlockPropsWithSetAttributes extends BlockProps {
-	setAttributes: Function;
+interface ComponentProps extends Object {
+	children?: React.ReactNode;
+	id?: string | null;
+	className?: string | null | (string | null)[] | undefined;
 }
 
 type ImageSize = {
@@ -53,22 +51,6 @@ interface Image extends Omit<ImageRaw, "sizes"> {
 	url: string;
 }
 
-interface AttributesDefinition
-	extends Record<
-		| "id"
-		| "slider_dot_color"
-		| "images_id"
-		| "images"
-		| "separation"
-		| "layout"
-		| "fixed_dimension"
-		| "cover"
-		| "cover_ratio"
-		| "responsive"
-		| "slider_id",
-		any
-	> {}
-
 interface Attributes {
 	id?: string;
 	slider_dot_color?: string;
@@ -81,4 +63,22 @@ interface Attributes {
 	cover_ratio?: number;
 	responsive?: boolean;
 	slider_id?: string;
+}
+
+interface EditProps {
+	className: string;
+	attributes: Attributes;
+	setAttributes: Function;
+}
+
+interface EditPropsExtended extends EditProps {
+	container_ratio: number;
+}
+
+interface SaveProps {
+	attributes: Attributes;
+}
+
+interface SavePropsExtended extends SaveProps {
+	container_ratio: number;
 }

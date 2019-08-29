@@ -1,6 +1,5 @@
-const pkg = require("../package.json");
+const { name } = require("../package.json");
 const CopyPlugin = require("copy-webpack-plugin");
-const { name } = pkg;
 
 module.exports = [
 	{

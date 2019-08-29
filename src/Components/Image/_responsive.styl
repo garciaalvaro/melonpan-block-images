@@ -1,0 +1,58 @@
+/**
+ * Image - Responsive
+ */
+
+@media (max-width: 600px)
+
+	+prefix-classes('mbi-')
+
+		div.responsive
+			flex-direction column
+
+			.figure
+				border-color transparent
+				border-top-style solid
+				border-bottom-style solid
+				border-left none
+				border-right none
+
+				&:first-child
+					border-top-style none
+
+				&:last-child
+					border-bottom-style none
+
+			.image
+				width 100%
+
+			&.layout-horizontal
+
+				&.fixed_dimension-width
+				&.fixed_dimension-height.cover
+					.figure
+						flex 0 1 auto
+
+			&.layout-slider
+				padding 0!important
+				margin-bottom 0
+				height auto
+
+				.image-container
+					padding 0!important
+
+				.image
+					width 100%
+					position relative
+					transform none
+
+				.slider-navigation
+					display none
+
+				.figure
+					display block
+
+				.slider-images
+				.figure
+				.image-container
+					position relative
+					height auto

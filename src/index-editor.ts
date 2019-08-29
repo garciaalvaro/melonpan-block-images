@@ -1,2 +1,2 @@
-import "./js/init/register-category";
-import "./js/init/register-block_type";
+import "./init/register-category";
+import "./init/register-block_type";
