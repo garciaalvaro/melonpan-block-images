@@ -19,9 +19,7 @@
 		"paths": {
 			"Components/*": ["src/Components/*"],
 			"utils/*": ["src/utils/*"]
-		},
-		// https://stackoverflow.com/a/52404148
-		"skipLibCheck": true
+		}
 	},
 	"include": ["src", "types.d.ts"],
 	"exclude": ["node_modules", ".webpack/*"],
