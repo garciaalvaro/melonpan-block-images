@@ -21,7 +21,11 @@ Add a gallery of images in a simple but clean layout. The block comes with the f
 * Fixed dimension for Horizontal and Slider layouts
 * Slider dot color
 
-Simple but developed to be useful. No JavaScript is loaded in the front-end. Each image is rendered with the srcset property containing all sizes available.
+Simple but created to be useful.
+Each image is rendered with the srcset property containing all sizes available.
+No scripts are added in the front-end.
+
+[GitHub repository](https://github.com/garciaalvaro/melonpan-block-images)
 
 
 == Usage ==
