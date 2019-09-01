@@ -17,6 +17,7 @@ module.exports = [
 						".*/**",
 						"_extras/**",
 						"_temp.js",
+						"assets-repo/**",
 						`build/${name}-front.js`,
 						"node_modules/**",
 						"package.json",
