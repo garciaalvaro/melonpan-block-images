@@ -2,15 +2,12 @@ import { addPrefix } from "utils/tools";
 
 const { __ } = wp.i18n;
 const { RangeControl } = wp.components;
-const { useCallback } = wp.element;
 
 export const ControlSeparation: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;
 	const { layout, separation } = attributes;
-	const onChange = useCallback(
-		(separation: Attributes["separation"]) => setAttributes({ separation }),
-		[]
-	);
+	const onChange = (separation: Attributes["separation"]) =>
+		setAttributes({ separation });
 
 	return (
 		<RangeControl

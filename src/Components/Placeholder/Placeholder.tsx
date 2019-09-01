@@ -5,13 +5,11 @@ interface Props extends EditProps {
 	setImages: Function;
 }
 
-const { useCallback } = wp.element;
-
 export const Placeholder: React.ComponentType<Props> = props => {
 	const { setImages, attributes } = props;
 	const { images, images_id } = attributes;
 	const has_images = images && !!images.length;
-	const onSelect = useCallback(images => setImages(images), []);
+	const onSelect = (images: ImageRaw[]) => setImages(images);
 
 	return (
 		<MediaPlaceholder

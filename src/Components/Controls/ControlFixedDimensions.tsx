@@ -2,16 +2,12 @@ import { addPrefix } from "utils/tools";
 
 const { __ } = wp.i18n;
 const { RadioControl } = wp.components;
-const { useCallback } = wp.element;
 
 export const ControlFixedDimensions: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;
 	const { fixed_dimension } = attributes;
-	const onChange = useCallback(
-		(fixed_dimension: Attributes["fixed_dimension"]) =>
-			setAttributes({ fixed_dimension }),
-		[]
-	);
+	const onChange = (fixed_dimension: Attributes["fixed_dimension"]) =>
+		setAttributes({ fixed_dimension });
 
 	return (
 		<RadioControl

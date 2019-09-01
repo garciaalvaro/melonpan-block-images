@@ -3,20 +3,16 @@ interface Props extends EditProps {
 }
 
 const { __ } = wp.i18n;
-const { useCallback } = wp.element;
 const { IconButton, Toolbar: WpToolbar } = wp.components;
 const { MediaUpload, BlockControls } = wp.blockEditor;
 
 export const Toolbar: React.ComponentType<Props> = props => {
 	const { attributes, setImages } = props;
 	const { images_id, images } = attributes;
-	const render = useCallback(
-		({ open }: Object) => (
-			<IconButton label={__("Edit images")} icon="edit" onClick={open} />
-		),
-		[]
+	const render = ({ open }: Object) => (
+		<IconButton label={__("Edit images")} icon="edit" onClick={open} />
 	);
-	const onSelect = useCallback(images => setImages(images), []);
+	const onSelect = (images: ImageRaw[]) => setImages(images);
 
 	return (
 		<BlockControls>

@@ -8,20 +8,16 @@ interface Props extends EditProps {
 const { __ } = wp.i18n;
 const { Button } = wp.components;
 const { MediaUpload } = wp.blockEditor;
-const { useCallback } = wp.element;
 
 export const ControlMediaUpload: React.ComponentType<Props> = props => {
 	const { attributes, setImages } = props;
 	const { images_id, images } = attributes;
-	const render = useCallback(
-		({ open }: Object) => (
-			<Button onClick={open} className={addPrefix("edit_images")}>
-				{__("Edit images")}
-			</Button>
-		),
-		[]
+	const render = ({ open }: Object) => (
+		<Button onClick={open} className={addPrefix("edit_images")}>
+			{__("Edit images")}
+		</Button>
 	);
-	const onSelect = useCallback(images => setImages(images), []);
+	const onSelect = (images: ImageRaw[]) => setImages(images);
 
 	return (
 		<Div className="control-container">

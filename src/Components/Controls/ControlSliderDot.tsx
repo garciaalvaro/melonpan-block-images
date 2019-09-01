@@ -7,16 +7,12 @@ const { isUndefined } = lodash;
 const { __ } = wp.i18n;
 const { BaseControl } = wp.components;
 const { ColorPalette } = wp.blockEditor;
-const { useCallback } = wp.element;
 
 export const ControlSliderDot: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;
 	const { slider_dot_color } = attributes;
-	const onChange = useCallback(
-		(color: string) =>
-			setAttributes({ slider_dot_color: isUndefined(color) ? "" : color }),
-		[]
-	);
+	const onChange = (color: string) =>
+		setAttributes({ slider_dot_color: isUndefined(color) ? "" : color });
 
 	return (
 		<BaseControl

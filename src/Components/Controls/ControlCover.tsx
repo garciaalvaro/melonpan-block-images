@@ -3,19 +3,14 @@ import { addPrefix } from "utils/tools";
 
 const { __, sprintf } = wp.i18n;
 const { BaseControl, ToggleControl, RangeControl } = wp.components;
-const { useCallback } = wp.element;
 
 export const ControlCover: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;
 	const { cover, cover_ratio } = attributes;
-	const onChangeCover = useCallback(
-		(cover: Attributes["cover"]) => setAttributes({ cover }),
-		[]
-	);
-	const onChangeCoverRatio = useCallback(
-		(cover_ratio: Attributes["cover_ratio"]) => setAttributes({ cover_ratio }),
-		[]
-	);
+	const onChangeCover = (cover: Attributes["cover"]) =>
+		setAttributes({ cover });
+	const onChangeCoverRatio = (cover_ratio: Attributes["cover_ratio"]) =>
+		setAttributes({ cover_ratio });
 
 	return (
 		<Div className="control-container">

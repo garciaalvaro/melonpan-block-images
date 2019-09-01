@@ -2,15 +2,11 @@ import { addPrefix } from "utils/tools";
 
 const { __ } = wp.i18n;
 const { RadioControl } = wp.components;
-const { useCallback } = wp.element;
 
 export const ControlLayout: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;
 	const { layout } = attributes;
-	const onChange = useCallback(
-		(layout: Attributes["layout"]) => setAttributes({ layout }),
-		[]
-	);
+	const onChange = (layout: Attributes["layout"]) => setAttributes({ layout });
 
 	return (
 		<RadioControl

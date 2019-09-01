@@ -2,15 +2,12 @@ import { addPrefix } from "utils/tools";
 
 const { __ } = wp.i18n;
 const { BaseControl, ToggleControl } = wp.components;
-const { useCallback } = wp.element;
 
 export const ControlResponsive: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;
 	const { responsive } = attributes;
-	const onChange = useCallback(
-		(responsive: Attributes["responsive"]) => setAttributes({ responsive }),
-		[]
-	);
+	const onChange = (responsive: Attributes["responsive"]) =>
+		setAttributes({ responsive });
 
 	return (
 		<BaseControl
