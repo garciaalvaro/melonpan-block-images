@@ -1,10 +1,10 @@
+import { __ } from "@wordpress/i18n";
+import { IconButton, Toolbar as WpToolbar } from "@wordpress/components";
+import { MediaUpload, BlockControls } from "@wordpress/block-editor";
+
 interface Props extends EditProps {
 	setImages: Function;
 }
-
-const { __ } = wp.i18n;
-const { IconButton, Toolbar: WpToolbar } = wp.components;
-const { MediaUpload, BlockControls } = wp.blockEditor;
 
 export const Toolbar: React.ComponentType<Props> = props => {
 	const { attributes, setImages } = props;

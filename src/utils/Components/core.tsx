@@ -1,3 +1,5 @@
+import { Fragment } from "@wordpress/element";
+
 import { icons, Icons } from "utils/data/icons";
 import { addPrefix } from "utils/tools/addPrefix";
 
@@ -14,8 +16,6 @@ export interface HTMLProps extends ComponentProps {
 interface IconProps {
 	icon: keyof Icons;
 }
-
-const { Fragment } = wp.element;
 
 export const Icon: React.ComponentType<IconProps> = props => (
 	<Fragment>{icons[props.icon] ? icons[props.icon] : null}</Fragment>

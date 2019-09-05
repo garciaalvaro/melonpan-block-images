@@ -1,7 +1,7 @@
-import { addPrefix } from "utils/tools";
+import { __ } from "@wordpress/i18n";
+import { BaseControl, ToggleControl } from "@wordpress/components";
 
-const { __ } = wp.i18n;
-const { BaseControl, ToggleControl } = wp.components;
+import { addPrefix } from "utils/tools";
 
 export const ControlResponsive: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;

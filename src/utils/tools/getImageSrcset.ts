@@ -1,4 +1,4 @@
-const { toArray, mapValues, sortBy, flow } = lodash;
+import { toArray, mapValues, sortBy, flow } from "lodash";
 
 export const getImageSrcset = (sizes: ImageRaw["sizes"]): string =>
 	flow([

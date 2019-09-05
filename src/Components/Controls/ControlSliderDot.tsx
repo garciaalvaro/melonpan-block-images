@@ -1,12 +1,11 @@
+import { isUndefined } from "lodash";
+import { __ } from "@wordpress/i18n";
+import { BaseControl } from "@wordpress/components";
+import { ColorPalette } from "@wordpress/block-editor";
 import tinycolor from "tinycolor2";
 
 import { Div, Span } from "utils/Components";
 import { addPrefix } from "utils/tools";
-
-const { isUndefined } = lodash;
-const { __ } = wp.i18n;
-const { BaseControl } = wp.components;
-const { ColorPalette } = wp.blockEditor;
 
 export const ControlSliderDot: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;

@@ -1,8 +1,12 @@
+import { __, sprintf } from "@wordpress/i18n";
+import {
+	BaseControl,
+	ToggleControl,
+	RangeControl
+} from "@wordpress/components";
+
 import { Div } from "utils/Components";
 import { addPrefix } from "utils/tools";
-
-const { __, sprintf } = wp.i18n;
-const { BaseControl, ToggleControl, RangeControl } = wp.components;
 
 export const ControlCover: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;

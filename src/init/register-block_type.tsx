@@ -1,3 +1,5 @@
+import { registerBlockType } from "@wordpress/blocks";
+
 import { Icon } from "utils/Components";
 import { getContainerRatio } from "utils/tools";
 import {
@@ -11,7 +13,7 @@ import { BlockContainer } from "Components/BlockContainer/BlockContainer";
 
 interface AttributesDefinition extends Record<keyof Attributes, any> {}
 
-wp.blocks.registerBlockType<AttributesDefinition>(block_name, {
+registerBlockType<AttributesDefinition>(block_name, {
 	title: block_title,
 	icon: () => <Icon icon="logo" />,
 	category: block_category,

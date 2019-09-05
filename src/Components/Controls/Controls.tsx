@@ -1,3 +1,5 @@
+import { InspectorControls } from "@wordpress/block-editor";
+
 import { Div } from "utils/Components";
 import { ControlMediaUpload } from "./ControlMediaUpload";
 import { ControlLayout } from "./ControlLayout";
@@ -10,8 +12,6 @@ import { ControlResponsive } from "./ControlResponsive";
 interface Props extends EditProps {
 	setImages: Function;
 }
-
-const { InspectorControls } = wp.blockEditor;
 
 export const Controls: React.ComponentType<Props> = props => {
 	const { attributes } = props;

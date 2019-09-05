@@ -1,3 +1,5 @@
+import { get } from "lodash";
+import { Fragment, useEffect, useMemo } from "@wordpress/element";
 import uuid from "uuid/v4";
 
 import { getImageSrcset, getImageRatio, getContainerRatio } from "utils/tools";
@@ -5,9 +7,6 @@ import { Controls } from "../Controls/Controls";
 import { Toolbar } from "../Toolbar/Toolbar";
 import { Placeholder } from "../Placeholder/Placeholder";
 import { BlockContainer } from "../BlockContainer/BlockContainer";
-
-const { get } = lodash;
-const { Fragment, useEffect, useMemo } = wp.element;
 
 export const Edit: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;

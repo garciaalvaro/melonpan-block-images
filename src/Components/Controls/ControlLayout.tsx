@@ -1,7 +1,7 @@
-import { addPrefix } from "utils/tools";
+import { __ } from "@wordpress/i18n";
+import { RadioControl } from "@wordpress/components";
 
-const { __ } = wp.i18n;
-const { RadioControl } = wp.components;
+import { addPrefix } from "utils/tools";
 
 export const ControlLayout: React.ComponentType<EditProps> = props => {
 	const { attributes, setAttributes } = props;

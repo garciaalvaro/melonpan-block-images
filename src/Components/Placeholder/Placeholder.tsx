@@ -1,5 +1,5 @@
-const { __ } = wp.i18n;
-const { MediaPlaceholder } = wp.blockEditor;
+import { __ } from "@wordpress/i18n";
+import { MediaPlaceholder } from "@wordpress/block-editor";
 
 interface Props extends EditProps {
 	setImages: Function;

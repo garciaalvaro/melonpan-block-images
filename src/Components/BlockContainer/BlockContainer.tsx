@@ -1,8 +1,8 @@
+import { isUndefined } from "lodash";
+
 import { Div } from "utils/Components";
 import { Image } from "../Image/Image";
 import { Slider } from "../Slider/Slider";
-
-const { isUndefined } = lodash;
 
 export const BlockContainer: React.ComponentType<
 	EditPropsExtended | SavePropsExtended

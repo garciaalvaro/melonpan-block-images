@@ -1,4 +1,4 @@
-const { get } = lodash;
+import { get } from "lodash";
 
 export const getImageRatio = (image: ImageRaw): string => {
 	const width = get(image, ["sizes", "full", "width"]);

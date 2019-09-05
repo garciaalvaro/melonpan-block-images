@@ -1,9 +1,9 @@
+import { noop } from "lodash";
+import { Fragment } from "@wordpress/element";
+
 import { Div, InputRadio, Label } from "utils/Components";
 import { addPrefix } from "utils/tools";
 import { Image } from "../Image/Image";
-
-const { noop } = lodash;
-const { Fragment } = wp.element;
 
 export const Slider: React.ComponentType<SavePropsExtended> = props => {
 	const { attributes, container_ratio } = props;

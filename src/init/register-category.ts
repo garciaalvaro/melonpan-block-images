@@ -1,9 +1,10 @@
+import { __ } from "@wordpress/i18n";
+import { select, dispatch } from "@wordpress/data";
+
 import { block_category } from "utils/data";
 
 type Category = import("wordpress__blocks/api/categories").Category;
 
-const { __ } = wp.i18n;
-const { select, dispatch } = wp.data;
 const categories: Category[] = select("core/blocks").getCategories();
 
 // If the categories array exists and "melonpan" hasn't been added yet
