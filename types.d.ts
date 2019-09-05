@@ -1,20 +1,6 @@
 // Console log shortcut
 declare const l: Function;
 
-// Lodash
-declare const lodash: typeof import("lodash");
-
-// Wordpress
-declare const wp: {
-	blockEditor: typeof import("wordpress__block-editor");
-	blocks: typeof import("wordpress__blocks");
-	components: typeof import("wordpress__components");
-	data: typeof import("wordpress__data");
-	element: typeof import("wordpress__element");
-	hooks: typeof import("wordpress__hooks");
-	i18n: typeof import("wordpress__i18n");
-};
-
 interface Object {
 	[key: string]: any;
 }
