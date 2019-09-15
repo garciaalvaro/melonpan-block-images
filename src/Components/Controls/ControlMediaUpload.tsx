@@ -17,7 +17,10 @@ export const ControlMediaUpload: React.ComponentType<Props> = props => {
 			{__("Edit images")}
 		</Button>
 	);
-	const onSelect = (images: ImageRaw[]) => setImages(images);
+	const onSelect = (images: ImageRaw[]) => {
+		l(images);
+		setImages(images);
+	};
 
 	return (
 		<Div className="control-container">
