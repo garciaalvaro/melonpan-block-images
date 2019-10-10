@@ -38,17 +38,17 @@ interface Image extends Omit<ImageRaw, "sizes"> {
 }
 
 interface Attributes {
-	id?: string;
-	slider_dot_color?: string;
-	images_id?: number[];
-	images?: Image[];
-	separation?: number;
-	layout?: "horizontal" | "vertical" | "slider";
-	fixed_dimension?: "height" | "width";
-	cover?: boolean;
-	cover_ratio?: number;
-	responsive?: boolean;
-	slider_id?: string;
+	id: string;
+	slider_dot_color: string;
+	images_id: number[];
+	images: Image[];
+	separation: number;
+	layout: "horizontal" | "vertical" | "slider";
+	fixed_dimension: "height" | "width";
+	cover: boolean;
+	cover_ratio: number;
+	responsive: boolean;
+	slider_id: string;
 }
 
 interface EditProps {
