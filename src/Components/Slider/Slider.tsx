@@ -53,7 +53,10 @@ export const Slider: React.ComponentType<SavePropsExtended> = props => {
 			</Div>
 
 			{images.length > 1 && (
-				<Div className="slider-navigation" style={{ color: slider_dot_color }}>
+				<Div
+					className="slider-navigation"
+					style={{ color: slider_dot_color || null }}
+				>
 					{images.map((image, index) => (
 						<Label
 							key={index}
