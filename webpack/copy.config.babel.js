@@ -27,7 +27,8 @@ module.exports = [
 						"README.md",
 						"src/**",
 						"tsconfig.json",
-						"types.d.ts"
+						"types.d.ts",
+						"webpack/**"
 					]
 				}
 			])
