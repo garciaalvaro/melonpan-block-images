@@ -1,10 +1,11 @@
 import { name } from "../package.json";
 import CopyPlugin from "copy-webpack-plugin";
+import path from "path";
 
 export default {
-	entry: __dirname + "/copy.entry.js",
+	entry: path.join(__dirname, "copy.entry.js"),
 	output: {
-		path: __dirname + "/../_release",
+		path: path.join(__dirname, "../_release"),
 		filename: "_temp.js"
 	},
 	plugins: [
