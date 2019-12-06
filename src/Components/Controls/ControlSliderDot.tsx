@@ -4,6 +4,7 @@ import { BaseControl } from "@wordpress/components";
 import { ColorPalette } from "@wordpress/block-editor";
 import tinycolor from "tinycolor2";
 
+import "./ControlSliderDot.styl";
 import { Div, Span } from "utils/Components";
 import { addPrefix } from "utils/tools";
 

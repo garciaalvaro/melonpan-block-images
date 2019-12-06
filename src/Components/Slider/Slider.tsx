@@ -1,6 +1,7 @@
 import { noop } from "lodash";
 import { Fragment } from "@wordpress/element";
 
+import "./Slider.styl";
 import { Div, InputRadio, Label } from "utils/Components";
 import { addPrefix } from "utils/tools";
 import { Image } from "../Image/Image";

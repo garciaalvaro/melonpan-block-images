@@ -1,5 +1,6 @@
 import { InspectorControls } from "@wordpress/block-editor";
 
+import "./Controls.styl";
 import { Div } from "utils/Components";
 import { ControlMediaUpload } from "./ControlMediaUpload";
 import { ControlLayout } from "./ControlLayout";

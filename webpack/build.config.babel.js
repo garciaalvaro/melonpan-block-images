@@ -9,10 +9,7 @@ import path from "path";
 export default {
 	entry: {
 		front: path.join(__dirname, "../src/index-front.styl"),
-		editor: [
-			path.join(__dirname, "../src/index-editor.ts"),
-			path.join(__dirname, "../src/index-editor.styl")
-		]
+		editor: path.join(__dirname, "../src/index-editor.ts")
 	},
 	output: {
 		path: path.join(__dirname, "../build"),
