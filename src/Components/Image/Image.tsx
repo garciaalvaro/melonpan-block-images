@@ -1,3 +1,4 @@
+import "./Image.styl";
 import { Div, Figure, Figcaption, Img } from "utils/Components";
 
 interface Props

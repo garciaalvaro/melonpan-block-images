@@ -2,6 +2,7 @@ import { __ } from "@wordpress/i18n";
 import { Button } from "@wordpress/components";
 import { MediaUpload } from "@wordpress/block-editor";
 
+import "./ControlMediaUpload.styl";
 import { Div } from "utils/Components";
 import { addPrefix } from "utils/tools";
 

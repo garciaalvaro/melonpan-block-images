@@ -1,9 +1,11 @@
-import { isUndefined } from "lodash";
-import { __ } from "@wordpress/i18n";
-import { BaseControl } from "@wordpress/components";
-import { ColorPalette } from "@wordpress/block-editor";
 import tinycolor from "tinycolor2";
+import { isUndefined } from "lodash";
+import { Fragment } from "@wordpress/element";
+import { __ } from "@wordpress/i18n";
+import { BaseControl, ColorIndicator } from "@wordpress/components";
+import { ColorPalette } from "@wordpress/block-editor";
 
+import "./ControlSliderDot.styl";
 import { Div, Span } from "utils/Components";
 import { addPrefix } from "utils/tools";
 
@@ -16,7 +18,12 @@ export const ControlSliderDot: React.ComponentType<EditProps> = props => {
 	return (
 		<BaseControl
 			id={addPrefix("slider_dot_color")}
-			label={<Span>{__("Slider dot color")}</Span>}
+			label={
+				<Fragment>
+					<Span>{__("Slider dot color")}</Span>
+					<ColorIndicator colorValue={slider_dot_color} />
+				</Fragment>
+			}
 			className={addPrefix([
 				"control-container",
 				"control",

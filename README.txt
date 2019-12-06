@@ -2,8 +2,8 @@
 Contributors: melonpan
 Tags: gutenberg, blocks, editor, images, slider, carousel
 Requires at least: 5.2
-Tested up to: 5.2
-Stable tag: 1.0.1
+Tested up to: 5.3
+Stable tag: 1.1.0
 Requires PHP: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -50,6 +50,10 @@ Installation from the WordPress admin.
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Improved code base.
+* Slider dot color can be left empty (so it will inherit the value)
 
 = 1.0.1 =
 * Cleaned TypeScript types.
