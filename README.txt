@@ -51,6 +51,10 @@ Installation from the WordPress admin.
 
 == Changelog ==
 
+= 1.1.0 =
+* Improved code base.
+* Slider dot color can be left empty (so it will inherit the value)
+
 = 1.0.1 =
 * Cleaned TypeScript types.
 
